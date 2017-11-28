@@ -1,10 +1,10 @@
-#Code Book
+# Code Book
 
 This code book summarizes the resulting data fields of Human Activity Recognition Using Smartphones Data Set in **_tidydata.txt_**. 
 Only the measurements on the mean and standard deviation for each measurement were kept.
 The tidydata contains 180 rows and 68 columns. Each row has activity, subject, and the average of each variable for each activity and each subject.
 
-##Feature of tidy data
+## Feature of tidy data
 
 1. activityLabel: the field has One of Six activity as listed below: 
 * WALKING
@@ -16,7 +16,7 @@ The tidydata contains 180 rows and 68 columns. Each row has activity, subject, a
 
 2. subject: identifier of the subject (numbered from 1 to 30) who carried out the experiment
 
-###Measurments: 66 average of mean or standard deviation measurement 
+### Measurments: 66 average of mean or standard deviation measurement 
 3. "tBodyAcc-mean()-X"
 ..1. "tBodyAcc-mean()-Y"
 ..1. "tBodyAcc-mean()-Z"
