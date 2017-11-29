@@ -67,7 +67,7 @@ run_analysis <- function() {
     
     ## 2. Extracts only the measurements on the mean and standard deviation for each measurement.
     message("Extracting mean and std variables...")
-    selected_features <- feature_names[grep("mean\\(\\)|std\\(\\)",feature_names$V2),]
+    selected_features <- feature_names[grep("mean|std",feature_names$V2,ignore.case = TRUE),]
     cols = paste("V", selected_features$V1, sep="")
     X <- X[,cols,with=FALSE]
     
@@ -80,7 +80,15 @@ run_analysis <- function() {
     ## 4. Appropriately labels the data set with descriptive variable names.
     message("Appropriately labels the data set...")
     colnames(X) <- selected_features$V2
-    
+    names(X)<-gsub("BodyBody", "Body",          names(X))
+    names(X)<-gsub("Acc",      "Accelerometer", names(X))
+    names(X)<-gsub("Gyro",     "Gyroscope",     names(X))
+    names(X)<-gsub("Mag",      "Magnitude",     names(X))
+    names(X)<-gsub("^t",       "time",          names(X))
+    names(X)<-gsub("^f",       "frequency",     names(X))
+    names(X)<-gsub("tBody",    "timeBody",      names(X))
+    names(X)<-gsub("Mean\\),",  "Mean,",        names(X))
+
     ## 5. From the data set in step 4, creates a second, independent tidy data set 
     ##    with the average of each variable for each activity and each subject.
     message("Createing an independent tidy data set with the average of each variable for each activity and each subject...")
