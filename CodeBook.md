@@ -43,7 +43,7 @@ Extracts Only the measurements on the mean and standard deviation for each measu
 
 2. subject: identifier of the subject (number sequenced from 1 to 30) who carried out the experiment
 
-3. Measurments: 86 average of mean or standard deviation measurement 
+3. Measurments: 86 average of mean or standard deviation measurement    
  [1] "timeBodyAccelerometer-mean()-X"                     "timeBodyAccelerometer-mean()-Y"                    
  [3] "timeBodyAccelerometer-mean()-Z"                     "timeBodyAccelerometer-std()-X"                     
  [5] "timeBodyAccelerometer-std()-Y"                      "timeBodyAccelerometer-std()-Z"                     
